@@ -31,8 +31,8 @@ public:
     double get_ey() const { return end_y; }
 
     virtual void printInfo() const {
-        cout << "Íà÷àëî îòðåçêà: (" << start_x << ", " << start_y << ")" << endl;
-        cout << "Êîíåö îòðåçêà: (" << end_x << ", " << end_y << ")" << endl;
+        cout << "ÃÃ Ã·Ã Ã«Ã® Ã®Ã²Ã°Ã¥Ã§ÃªÃ : (" << start_x << ", " << start_y << ")" << endl;
+        cout << "ÃŠÃ®Ã­Ã¥Ã¶ Ã®Ã²Ã°Ã¥Ã§ÃªÃ : (" << end_x << ", " << end_y << ")" << endl;
     }
 
     double Length() const {
@@ -46,7 +46,7 @@ private:
     string color;
 
 public:
-    Drawn_segment() : Segment(), thickness(1.0), color("÷åðíûé") {}
+    Drawn_segment() : Segment(), thickness(1.0), color("Ã·Ã¥Ã°Ã­Ã»Ã©") {}
     Drawn_segment(double sx, double sy, double ex, double ey, double t, string c) : Segment(sx, sy, ex, ey), thickness(t), color(c) {}
     ~Drawn_segment() override {}
 
@@ -57,8 +57,8 @@ public:
 
     void printInfo() const override {
         Segment::printInfo();
-        cout << "Òîëùèíà: " << thickness << endl;
-        cout << "Öâåò: " << color << endl;
+        cout << "Ã’Ã®Ã«Ã¹Ã¨Ã­Ã : " << thickness << endl;
+        cout << "Ã–Ã¢Ã¥Ã²: " << color << endl;
     }
 };
 
@@ -69,28 +69,28 @@ int main() {
     seg1.start(1.0, 2.0);
     seg1.end(4.0, 6.0);
 
-    cout << "Îòðåçîê 1:" << endl;
+    cout << "ÃŽÃ²Ã°Ã¥Ã§Ã®Ãª 1:" << endl;
     seg1.printInfo();
-    cout << "Äëèíà: " << seg1.Length() << endl;
+    cout << "Ã„Ã«Ã¨Ã­Ã : " << seg1.Length() << endl;
     Segment seg2(0.0, 0.0, 3.0, 4.0);
-    cout << "Îòðåçîê 2:" << endl;
+    cout << "ÃŽÃ²Ã°Ã¥Ã§Ã®Ãª 2:" << endl;
     seg2.printInfo();
-    cout << "Äëèíà: " << seg2.Length() << endl;
+    cout << "Ã„Ã«Ã¨Ã­Ã : " << seg2.Length() << endl;
 
     Drawn_segment dseg1;
     dseg1.start(1.0, 1.0);
     dseg1.end(5.0, 5.0);
     dseg1.set_thickness(2.5);
-    dseg1.set_color("êðàñíûé");
+    dseg1.set_color("ÃªÃ°Ã Ã±Ã­Ã»Ã©");
 
-    cout << "Íàðèñîâàííûé îòðåçîê 1:" << endl;
+    cout << "ÃÃ Ã°Ã¨Ã±Ã®Ã¢Ã Ã­Ã­Ã»Ã© Ã®Ã²Ã°Ã¥Ã§Ã®Ãª 1:" << endl;
     dseg1.printInfo();
-    cout << "Äëèíà: " << dseg1.Length() << endl;
+    cout << "Ã„Ã«Ã¨Ã­Ã : " << dseg1.Length() << endl;
 
-    Drawn_segment dseg2(0.0, 0.0, 10.0, 10.0, 3.0, "ñèíèé");
-    cout << "Íàðèñîâàííûé îòðåçîê 2:" << endl;
+    Drawn_segment dseg2(0.0, 0.0, 10.0, 10.0, 3.0, "Ã±Ã¨Ã­Ã¨Ã©");
+    cout << "ÃÃ Ã°Ã¨Ã±Ã®Ã¢Ã Ã­Ã­Ã»Ã© Ã®Ã²Ã°Ã¥Ã§Ã®Ãª 2:" << endl;
     dseg2.printInfo();
-    cout << "Äëèíà: " << dseg2.Length() << endl;
+    cout << "Ã„Ã«Ã¨Ã­Ã : " << dseg2.Length() << endl;
 
     return 0;
 }
